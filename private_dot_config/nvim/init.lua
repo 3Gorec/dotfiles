@@ -36,6 +36,10 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+local json_config = require('lsp.json');
+vim.lsp.config('jsonls', json_config )
+vim.lsp.enable('jsonls')
+
 local typescript_config = require('lsp.typescript');
 vim.lsp.config('typescriptls', typescript_config )
 vim.lsp.enable('typescriptls')
