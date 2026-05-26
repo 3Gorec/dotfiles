@@ -1,16 +1,6 @@
 -- Key mappings
 vim.keymap.set("i", "jk", "<Esc>", { desc = "Exit insert mode with jk" })
 
-vim.keymap.set("n", "<leader>cct", "<cmd>CopilotChatToggle<CR>", { desc = "Toggle Copilot Chat (Float)" })
-vim.keymap.set(
-  "n",
-  "<leader>ccv",
-  function()
-    require("CopilotChat").toggle({ window = { layout = 'vertical', width = 0.4, }, })
-  end,
-  { desc = "Toggle Copilot Chat (Vertical Split)" }
-)
-
 vim.keymap.set("n", "gf", vim.diagnostic.open_float,
   { buffer = bufnr, desc = "Show floating messages with error from lsp" })
 

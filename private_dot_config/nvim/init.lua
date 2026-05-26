@@ -2,8 +2,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " " -- for <localleader>, if you want
 
-require("config.lazy")
-
 require("core.keymaps")
 
 -- Line numbers
@@ -61,3 +59,16 @@ vim.lsp.config('markdown-oxide', markdown_config)
 vim.lsp.enable('markdown-oxide')
 
 vim.opt.signcolumn = 'yes'
+
+require("plugins.mason")
+require("plugins.gruvbox")
+require("plugins.neoscroll")
+require("plugins.yazi")
+require("plugins.telescope")
+require("plugins.treesitter")
+require("plugins.copilot")
+require("plugins.copilot-chat")
+require("plugins.nvim-cmp")
+require("plugins.diffview")
+require("plugins.lualine")
+require("plugins.which-key")
