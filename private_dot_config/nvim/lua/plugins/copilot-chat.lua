@@ -6,23 +6,41 @@ return {
     },
     build = "make tiktoken",
     opts = {
-      -- See Configuration section for options
+      -- This acts as your DEFAULT layout (Float)
       window = {
         layout = 'float',
-        width = 0.7,        -- Fixed width in columns
-        height = 0.95,      -- Fixed height in rows
+        width = 0.7,
+        height = 0.95,
         row = 0,
-        border = 'rounded', -- 'single', 'double', 'rounded', 'solid'
+        border = 'rounded',
         title = 'Copilot',
-        -- zindex = 100,       -- Ensure window stays on top
       },
-
       headers = {
         tool = '🔧 Tool',
       },
-
       separator = '━━',
-      auto_fold = true, -- Automatically folds non-assistant messages
+      auto_fold = true,
+    },
+    keys = {
+      -- 1. Toggle Default (Floating Window)
+      {
+        "<leader>cct",
+        "<cmd>CopilotChatToggle<CR>",
+        desc = "Toggle Copilot Chat (Float)",
+      },
+      -- 2. Toggle Override (Vertical Split)
+      {
+        "<leader>ccv",
+        function()
+          require("CopilotChat").toggle({
+            window = {
+              layout = 'vertical',
+              width = 0.3, -- Takes up 30% of your screen
+            },
+          })
+        end,
+        desc = "Toggle Copilot Chat (Vertical Split)",
+      },
     },
   },
 }

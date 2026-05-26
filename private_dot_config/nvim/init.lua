@@ -25,6 +25,10 @@ vim.opt.expandtab = true -- convert tabs to spaces
 vim.opt.shiftwidth = 4   -- number of spaces per indent
 vim.opt.tabstop = 4      -- number of spaces per tab
 
+--- Split settings
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
 -- Set 2-space tabs for Lua files
 vim.api.nvim_create_autocmd("FileType", {
   group = augroup,
@@ -52,8 +56,8 @@ local luals_config = require('lsp.lua');
 vim.lsp.config('luals', luals_config)
 vim.lsp.enable('luals')
 
--- local java_config = require('lsp.java');
--- vim.lsp.config('javals', java_config)
--- vim.lsp.enable('javals')
+local markdown_config = require('lsp.markdown')
+vim.lsp.config('markdown-oxide', markdown_config)
+vim.lsp.enable('markdown-oxide')
 
 vim.opt.signcolumn = 'yes'

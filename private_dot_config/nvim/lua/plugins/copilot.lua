@@ -1,7 +1,5 @@
 return {
   "zbirenbaum/copilot.lua",
-  cmd = "Copilot",
-  event = "InsertEnter",
   config = function()
     require("copilot").setup({
       suggestion = {
@@ -10,6 +8,8 @@ return {
         -- Use the Tab key to accept suggestions
         keymap = {
           accept = "<Tab>",
+          accept_word = "<M-Right>", -- Alt + Right Arrow accepts one word
+          accept_line = "<M-Down>",  -- Alt + Down Arrow accepts one line
           dismiss = "<C-e>",
         },
       },
