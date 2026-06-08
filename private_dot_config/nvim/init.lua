@@ -63,6 +63,7 @@ vim.opt.signcolumn = 'yes'
 require("plugins.mason")
 require("plugins.gruvbox")
 require("plugins.neoscroll")
+require("plugins.nvim-neoclip")
 require("plugins.yazi")
 require("plugins.telescope")
 require("plugins.treesitter")

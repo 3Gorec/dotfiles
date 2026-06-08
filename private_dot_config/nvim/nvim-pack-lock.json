@@ -52,6 +52,10 @@
       "rev": "a1d504892f2bc56c2e79b65c6faded2fd21f3eca",
       "src": "https://github.com/hrsh7th/nvim-cmp"
     },
+    "nvim-neoclip.lua": {
+      "rev": "831a97c7697736411a05ff8b91e8798ea4c2d6fb",
+      "src": "https://github.com/AckslD/nvim-neoclip.lua"
+    },
     "nvim-treesitter": {
       "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
