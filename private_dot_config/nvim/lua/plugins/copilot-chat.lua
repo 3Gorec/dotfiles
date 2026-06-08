@@ -28,7 +28,7 @@ require("CopilotChat").setup({
     tool = '🔧 Tool',
   },
   separator = '━━',
-  auto_fold = true,
+  auto_fold = false,
 })
 
 vim.keymap.set("n", "<leader>cct", "<cmd>CopilotChatToggle<CR>", { desc = "Toggle Copilot Chat (Float)" })
